@@ -1,0 +1,111 @@
+\section{Metodologia de Desenvolvimento}
+
+O trabalho foi desenvolvido seguindo as recomendações da especificação, com as seguintes etapas:
+
+\subsection{Diagrama do Caminho de Dados (Datapath)}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{datapath.pdf}
+    \caption{Diagrama em caixas do caminho de dados do REDUX-V. Os componentes principais incluem:
+    \begin{itemize}
+        \item Banco de registradores (4 registradores de 8 bits)
+        \item ULA com operações aritméticas e lógicas
+        \item Unidade de controle com decodificador de instruções
+        \item Múltiplexadores para seleção de operandos
+        \item Memória RAM dual-port (256 bytes)
+    \end{itemize}}
+    \label{fig:datapath}
+\end{figure}
+
+\subsection{Projeto da ULA}
+A Unidade Lógica Aritmética foi projetada para suportar todas as operações da ISA:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ula_design.pdf}
+    \caption{Diagrama interno da ULA mostrando:
+    \begin{itemize}
+        \item Circuitos para operações básicas (ADD, SUB)
+        \item Lógica combinacional para operações booleanas (AND, OR, XOR, NOT)
+        \item Shifters para SLR e SRR
+        \item Circuito de detecção de zero para branches
+    \end{itemize}}
+    \label{fig:ula}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{Códigos de operação da ULA}
+\begin{tabular}{|c|c|l|}
+\hline
+\textbf{Operação} & \textbf{Código} & \textbf{Descrição} \\
+\hline
+ADD & 0000 & Soma de dois operandos \\
+SUB & 0001 & Subtração \\
+AND & 0010 & AND lógico \\
+OR & 0011 & OR lógico \\
+XOR & 0100 & XOR lógico \\
+NOT & 0101 & NOT lógico \\
+SLR & 0110 & Shift left lógico \\
+SRR & 0111 & Shift right lógico \\
+\hline
+\end{tabular}
+\label{tab:ula_ops}
+\end{table}
+
+\subsection{Implementação no Logisim Evolution}
+O projeto foi implementado no Logisim Evolution com:
+\begin{itemize}
+    \item Clock configurado para 2 ticks conforme especificação
+    \item Memória RAM utilizando o componente \texttt{dual\_port\_ram}
+    \item Sinal de reset para inicialização dos registradores
+    \item Visualização dos valores dos registradores e da memória
+\end{itemize}
+
+\subsection{Programa Assembly com Novas Instruções}
+O programa do Trabalho 1 foi reescrito utilizando as três novas instruções implementadas:
+
+\begin{lstlisting}[language={[x86masm]Assembler},caption=Programa com novas instruções]
+; Inicialização
+sub r0, r0      ; Zera registradores
+sub r1, r1
+sub r2, r2
+sub r3, r3
+
+; Preenche vetores usando muli e brzrue
+loop_preench:
+muli 5          ; R[0] = R[0] * 5 (nova instrução)
+st r0, r1       ; Armazena no vetor
+addi 1          ; Incrementa valor
+addi 10         ; Avança posição
+brzrue 4        ; Branch condicional (nova instrução)
+jien loop_preench ; Loop backward (nova instrução)
+
+; ... resto do código ...
+\end{lstlisting}
+
+\subsection{Justificativa das Novas Instruções}
+As três novas instruções implementadas foram:
+
+\begin{enumerate}
+    \item \textbf{jien (Jump Immediate Extended Negative)}: Permite loops eficientes com deslocamento negativo calculado, reduzindo 3 instruções para 1.
+    
+    \item \textbf{muli (Multiplication Immediate)}: Elimina a necessidade de loops para multiplicação, acelerando operações matemáticas.
+    
+    \item \textbf{brzrue (Branch on Zero Unsigned Extended)}: Otimiza verificações de condição com deslocamento positivo calculado, útil para loops e estruturas condicionais.
+\end{enumerate}
+
+\subsection{Memórias de Controle}
+As memórias ROM de controle foram preenchidas conforme:
+\begin{itemize}
+    \item Memória de controle principal: 256 palavras de 12 bits
+    \item Memória de controle da ULA: 16 palavras de 8 bits
+    \item Valores calculados com base no opcode e sinais de controle
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{memoria_controle.png}
+    \caption{Preenchimento da memória de controle mostrando os sinais para cada instrução}
+    \label{fig:mem_controle}
+\end{figure}
