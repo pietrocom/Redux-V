@@ -864,43 +864,12 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="4" loc="(240,720)" name="ROM">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 8 8
-d0 d5 da df 47 43 d4 65
-45 c0 cc da d0 c1 78 d0
-47 43 c4 d0 cd 3b 41 c8
-47 42 cc 3b dd dc 4f d4
-d0 41 c8 d0 c1 58 da df
-47 43 d4 d0 c1 a0 79 d0
-47 43 c4 d0 cd 2b 47 41
-cc 23 c8 d0 47 43 cc 3b
-dc dc 4f d4 d0 c1 58 a0
-10
-</a>
-      <a name="label" val="trabalho2_end"/>
-      <a name="labelvisible" val="true"/>
-    </comp>
     <comp lib="4" loc="(510,330)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="asyncread" val="true"/>
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(510,610)" name="ROM">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 8 8
-d0 d5 da df 47 43 d4 67
-42 cc da d0 c1 78 d0 47
-43 c4 d0 cd 3b 41 c8 47
-42 cc 3b dd dc 4f d4 d0
-41 c8 d0 c1 58 da 47 43
-d4 d0 c1 a0 79 d0 47 43
-c4 d0 cd 2b 47 43 cc 23
-c8 d0 47 43 cc 3b dd dc
-dc 4f d4 d0 c1 58 a0 10
-</a>
-    </comp>
-    <comp lib="4" loc="(840,830)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
 d0 d5 da df 41 dc 47 42
@@ -919,6 +888,22 @@ c8 d0 47 43 cc 3b d0 47
 d0 3 43 cc d0 10
 </a>
       <a name="label" val="trabalho1"/>
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="4" loc="(510,860)" name="ROM">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 8 8
+d0 d5 da df 47 43 d4 67
+42 cc da d0 c1 78 d0 47
+43 c4 d0 cd 3b 41 c8 47
+42 cc 3b dd dc 4f d4 d0
+41 c8 d0 c1 58 da 47 43
+d4 d0 c1 a0 79 d0 47 43
+c4 d0 cd 2b 47 43 cc 23
+c8 d0 47 43 cc 3b dd dc
+dc 4f d4 d0 c1 58 a0 10
+</a>
+      <a name="label" val="trabalho2"/>
       <a name="labelvisible" val="true"/>
     </comp>
     <wire from="(300,340)" to="(510,340)"/>
