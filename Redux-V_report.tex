@@ -60,13 +60,45 @@ A arquitetura REDUX-V suporta um conjunto enxuto de instruções, como:
   \item Manipulação de registradores e memória: \texttt{load}, \texttt{store}
 \end{itemize}
 
+Estas que podem ser de dois tipos:
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Opcode} & \multicolumn{4}{c|}{Imediato} \\ \hline
+7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 \\ \hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{Opcode} & \multicolumn{2}{c|}{r[a]} & \multicolumn{2}{c|}{r[b]} \\ \hline
+7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 \\ \hline
+\end{tabular}
+\end{minipage}
+\caption{Formatos de instrução Tipo I e Tipo R}
+\label{fig:instruction_formats}
+\end{figure}
+
 \section{Datapath do Processador}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{images/Redux-V_datapath_2.png}
+\includegraphics[width=0.9\textwidth]{images/Redux-V_datapath3.drawio.png}
 \caption{Datapath do processador REDUX-V}
 \label{fig:datapath}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{images/Redux-V_datapath_2.png}
+\caption{Figura do processador REDUX-V em circuito}
+\label{fig:circuit}
 \end{figure}
 
 O datapath define o caminho de dados percorrido durante a execução de uma instrução. Ele inclui componentes como o banco de registradores, a ULA, multiplexadores, unidade de controle, extensor de sinal, componente de variação nos saltos e memória de dados.

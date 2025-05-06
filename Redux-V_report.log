@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.5)  5 MAY 2025 11:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.5.5)  5 MAY 2025 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,46 +305,53 @@ Overfull \hbox (3.90955pt too wide) in paragraph at lines 41--42
  prin-ci-pais como a ULA e a mem^^Soria
  []
 
-<images/Redux-V_datapath_2.png, id=1, 1507.6325pt x 903.375pt>
-File: images/Redux-V_datapath_2.png Graphic file (type png)
-<use images/Redux-V_datapath_2.png>
-Package pdftex.def Info: images/Redux-V_datapath_2.png  used on input line 67.
-(pdftex.def)             Requested size: 409.71692pt x 245.49971pt.
+<images/Redux-V_datapath3.drawio.png, id=1, 788.9475pt x 342.27875pt>
+File: images/Redux-V_datapath3.drawio.png Graphic file (type png)
+<use images/Redux-V_datapath3.drawio.png>
+Package pdftex.def Info: images/Redux-V_datapath3.drawio.png  used on input lin
+e 92.
+(pdftex.def)             Requested size: 409.71692pt x 177.75093pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<images/ALU.png, id=14, 730.73pt x 450.68375pt>
+<images/Redux-V_datapath_2.png, id=15, 1507.6325pt x 903.375pt>
+File: images/Redux-V_datapath_2.png Graphic file (type png)
+<use images/Redux-V_datapath_2.png>
+Package pdftex.def Info: images/Redux-V_datapath_2.png  used on input line 99.
+(pdftex.def)             Requested size: 409.71692pt x 245.49971pt.
+<images/ALU.png, id=16, 730.73pt x 450.68375pt>
 File: images/ALU.png Graphic file (type png)
 <use images/ALU.png>
-Package pdftex.def Info: images/ALU.png  used on input line 78.
+Package pdftex.def Info: images/ALU.png  used on input line 110.
 (pdftex.def)             Requested size: 341.43307pt x 210.58354pt.
- [2 <./images/Redux-V_datapath_2.png (PNG copy)> <./images/ALU.png (PNG copy)>]
-<images/controll_memory.png, id=18, 1180.41pt x 844.15375pt>
+ [2 <./images/Redux-V_datapath3.drawio.png> <./images/Redux-V_datapath_2.png (P
+NG copy)>]
+<images/controll_memory.png, id=21, 1180.41pt x 844.15375pt>
 File: images/controll_memory.png Graphic file (type png)
 <use images/controll_memory.png>
-Package pdftex.def Info: images/controll_memory.png  used on input line 102.
+Package pdftex.def Info: images/controll_memory.png  used on input line 134.
 (pdftex.def)             Requested size: 386.96027pt x 276.71677pt.
- [3 <./images/controll_memory.png>]
-<images/variation_component.png, id=24, 830.10126pt x 251.94125pt>
+ [3 <./images/ALU.png (PNG copy)>]
+<images/variation_component.png, id=25, 830.10126pt x 251.94125pt>
 File: images/variation_component.png Graphic file (type png)
 <use images/variation_component.png>
-Package pdftex.def Info: images/variation_component.png  used on input line 122
+Package pdftex.def Info: images/variation_component.png  used on input line 154
 .
 (pdftex.def)             Requested size: 295.90588pt x 89.8069pt.
- [4 <./images/variation_component.png (PNG copy)>] [5] [6] [7]
-[8] [9] (./Redux-V_report.aux)
+ [4 <./images/controll_memory.png>] [5 <./images/variation_component.png (PNG c
+opy)>] [6] [7] [8] [9] (./Redux-V_report.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 7062 strings out of 480227
- 110788 string characters out of 5895371
- 917569 words of memory out of 5000000
- 24965 multiletter control sequences out of 15000+600000
- 474538 words of font info for 47 fonts, out of 8000000 for 9000
+ 7087 strings out of 480227
+ 111266 string characters out of 5895371
+ 879569 words of memory out of 5000000
+ 24983 multiletter control sequences out of 15000+600000
+ 477349 words of font info for 57 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 55i,6n,63p,492b,1630s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,63p,492b,1630s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/pietro/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.60
 0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sh
@@ -356,10 +363,10 @@ ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmtt12.pfb>
-Output written on Redux-V_report.pdf (9 pages, 264136 bytes).
+Output written on Redux-V_report.pdf (9 pages, 273943 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

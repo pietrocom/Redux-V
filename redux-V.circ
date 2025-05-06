@@ -6,9 +6,6 @@
     <tool name="Pin">
       <a name="appearance" val="classic"/>
     </tool>
-    <tool name="Constant">
-      <a name="facing" val="north"/>
-    </tool>
   </lib>
   <lib desc="#Gates" name="1">
     <tool name="NOT Gate">
@@ -67,7 +64,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="1024000.0"/>
     <comp lib="0" loc="(1020,1240)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="RegW"/>
@@ -134,6 +131,7 @@
     <comp lib="0" loc="(340,980)" name="Clock">
       <a name="highDuration" val="2"/>
       <a name="lowDuration" val="2"/>
+      <a name="phaseOffset" val="2"/>
     </comp>
     <comp lib="0" loc="(340,980)" name="Tunnel">
       <a name="label" val="Clk"/>
@@ -861,14 +859,14 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(460,390)" name="Constant"/>
-    <comp lib="0" loc="(890,420)" name="Pin">
+    <comp lib="0" loc="(860,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="data"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(890,670)" name="Pin">
+    <comp lib="0" loc="(870,670)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="instr"/>
@@ -878,6 +876,8 @@
     <comp lib="4" loc="(510,330)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="asyncread" val="true"/>
+      <a name="label" val="RAM_MOD"/>
+      <a name="labelvisible" val="true"/>
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(510,610)" name="ROM">
@@ -929,8 +929,8 @@ d0 3 43 cc d0 10
     <wire from="(410,400)" to="(410,430)"/>
     <wire from="(410,400)" to="(510,400)"/>
     <wire from="(460,390)" to="(510,390)"/>
-    <wire from="(750,420)" to="(890,420)"/>
-    <wire from="(750,670)" to="(890,670)"/>
+    <wire from="(750,420)" to="(860,420)"/>
+    <wire from="(750,670)" to="(870,670)"/>
   </circuit>
   <circuit name="signext">
     <a name="appearance" val="logisim_evolution"/>
